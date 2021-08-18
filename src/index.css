@@ -1,13 +1,138 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+*{
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+body {
+  margin: 0;
+  background-color: rgb(83, 67, 126);
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
+.root{
+  display: flex;
+  flex-direction: column;
+}
+
+header{
+  background-color: #373b69;
+  display: flex;
+  padding-top: 1rem;
+  justify-content: space-between;
+}
+
+.search{
+  background-color: transparent;
+border: 2px solid rgb(223, 24, 24);
+border-radius: 50px;
+color: white;
+font-family:inherit;
+font-size: 1.2rem;
+padding: 0.5rem;
+}
+
+.search:focus{
+  outline: none;
+}
+
+#logo{
+  
+  padding-left: 10px;
+  margin-top: 10px;
+  /* padding-top: 10px; */
+
+}
+
+.title{
+  margin-top: -4px;
+  font-family:'Times New Roman', Times, serif;
+  font-size: 30px;
+
+}
+
+.movie-container{
+  display:flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.movie{
+  background-color: #373b69;
+  border-radius: 3px;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  position: relative;
+  margin: 1rem;
+  width: 250px;
+}
+
+.movie img{
+  object-fit: cover;
+  height: 450px;
+  width: 100%
+}
+
+.movie-info{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.movie-info h3{
+  margin: 0;
+}
+
+.movie-over {
+  background-color: white;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  box-shadow: 0 -3px rgba(0, 0, 0, 0.1);
+  color: #373b69;
+  padding: 1rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: auto;
+  max-height: 100%;
+  transform: translateY(102%);
+  transition: 0.5s ease-in-out;
+}
+
+.movie:hover .movie-over {
+  transform: translateY(0%);
+}
+
+.tag{
+  background-color: #373b69;
+  padding: 0.5rem;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.tag.green {
+color: rgb(35, 190, 35);
+}
+
+.tag.orange {
+color: orange;
+}
+
+.tag.red {
+color: red;
+}
+
+#nextButton{
+  cursor: pointer;
+  padding:10px 0;
+  margin: 2rem 36rem;
+  font-family: 'Times New Roman', Times, serif;
+  background-color:#373b69 ;
+  color: white;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  outline: none;
+}
+
